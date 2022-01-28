@@ -265,9 +265,8 @@ pisoGroup.setVisibleEach(false)
 colum=createSprite(1800, 180, 1190, 70)
 colum.visible=false
 
-colum2=createSprite(2980, 125, 1200, 70)
+colum2=createSprite(2980, 160, 1200, 70)
 colum2.visible=false
-
 //lava
 lava1=createSprite(534, 533, 10, 10)
 lava1.addImage(lavaImg)
@@ -354,7 +353,7 @@ lansarayos.scale=0.15
 
 
 boton1=createSprite(2420, 500, 10, 10)
-boton2=createSprite(3490, 170, 10, 10)
+boton2=createSprite(3490, 220, 10, 10)
 
 
 
@@ -437,7 +436,7 @@ pareddivisora1.addAnimation("pared", pareddivisora1Img1)
 pareddivisora1.scale=0.4
 pareddivisora1.addAnimation("pequeña", pareddivisora1Img2)
 
-boton3=createSprite(4345, 190, 10, 10)
+boton3=createSprite(4227, 195, 10, 10)
 
 
 
@@ -608,21 +607,21 @@ spider.collide(block2Group)
   camera.position.y=405
 
 
-v1.y=camera.position.y-310
-v1.x=camera.position.x+390
+v1.y=camera.position.y-195
+v1.x=camera.position.x+370
 v1.visible=true
  
-v2.y=camera.position.y-310
-v2.x=camera.position.x+440
+v2.y=camera.position.y-195
+v2.x=camera.position.x+415
 v2.visible=true
  
 
-v3.y=camera.position.y-310
-v3.x=camera.position.x+490
+v3.y=camera.position.y-195
+v3.x=camera.position.x+460
 v3.visible=true
 
-v4.y=camera.position.y-310
-v4.x=camera.position.x+540
+v4.y=camera.position.y-195
+v4.x=camera.position.x+505
 v4.visible=true
 
 
@@ -813,9 +812,9 @@ dronesvoladoresGroup.add(dronesaleatorios)
 
 
 if(spider.x>3450 && spider.x<3470){
-anunciodrones=createSprite(4100, camera.position.y/2+100, 10, 10 )
+anunciodrones=createSprite(4000, camera.position.y/2+120, 10, 10 )
 anunciodrones.addImage(anunciodronesImg)
-anunciodrones.scale=0.4
+anunciodrones.scale=0.36
 anunciodrones.lifetime=55
 }
 
@@ -985,8 +984,8 @@ laserultimoGroup.add(laserultimo)
     
  image(guaridaImg, 5990, 137, 1200, 400)
   image(columnaImg, 1200, 150, 1200, 290)
-  image(columna2Img, 2390, 95, 1200, 160)
-  image(columna3Img, 6000, 75, 1200, 60)
+  image(columna2Img, 2390, 130, 1200, 160)
+  image(columna3Img, 6000, 95, 1200, 60)
 
  //accesorios 2
 image(pinoImg, 150, 300, 130, 200)
@@ -1002,7 +1001,7 @@ image(lamparaImg, 4200, 350, 100, 150)
 image(pinoImg, 5500, 300, 120, 200)
 image(arbusto2Img, 5100, 450, 140, 50)
 //image(arbolImg, 6400, 350, 150, 150)
-image(lasarayos2, 4300,170, 80, 50)
+image(lasarayos2, 4190,180, 80, 50)
 
 
          spider.depth=piso.depth;
@@ -1067,7 +1066,7 @@ image(lasarayos2, 4300,170, 80, 50)
 
         fill("white")
 textFont(font, 32)
-        text("Drones destruidos:" + dronesdestruidos + "/4", 3800, camera.position.y/2-80)
+        text("Drones destruidos:" + dronesdestruidos + "/4", 3600, camera.position.y/2)
 
 //drones 
 if(disparolaserGroup.isTouching(dronesvoladoresGroup)){
@@ -1134,7 +1133,7 @@ if(vidan2===0){
 
         fill("white")
 
-        text("Vida:", camera.position.x+300, camera.position.y-300)
+        text("Vida:", camera.position.x+290, camera.position.y-185)
 
 
         if(spider.isTouching(laserGroup) || spider.isTouching(lavaGroup) || spider.isTouching(puasGroup) || spider.isTouching(pirañaGroup)){
@@ -1142,7 +1141,7 @@ if(vidan2===0){
           spider.y=500
           spider.velocityY=0
           vidas-=1
-anunciovida=createSprite(700, camera.position.y/2, 40, 40)
+anunciovida=createSprite(700, camera.position.y/2+50, 40, 40)
 anunciovida.addImage(sigueImg)
 anunciovida.scale=0.32
 anunciovida.lifetime=50   
@@ -1165,7 +1164,7 @@ spider.velocityY=0
 spider.velocityX=0
 flechaGroup.destroyEach();
 
-anunciovida=createSprite(3000, camera.position.y/2, 40, 40)
+anunciovida=createSprite(3000, camera.position.y/2+50, 40, 40)
 anunciovida.addImage(sigueImg)
 anunciovida.scale=0.32
 anunciovida.lifetime=50   
@@ -1189,7 +1188,7 @@ spider.velocityX=0
 rayo2Group.destroyEach();
 
 
-anunciovida=createSprite(4200, camera.position.y/2, 40, 40)
+anunciovida=createSprite(4200, camera.position.y/2+50, 40, 40)
 anunciovida.addImage(sigueImg)
 anunciovida.scale=0.32
 anunciovida.lifetime=50   
@@ -1213,7 +1212,7 @@ spider.velocityY=0
 misilopoGroup.destroyEach();
 
 
-anunciovida=createSprite(5400, camera.position.y/2, 40, 40)
+anunciovida=createSprite(5400, camera.position.y/2+54, 40, 40)
 anunciovida.addImage(sigueImg)
 anunciovida.scale=0.32
 anunciovida.lifetime=50   
@@ -1282,6 +1281,7 @@ console.log(vidas)
 
   if(gameState===2){
 anunciovida.destroy();
+anunciodrones.destroy();
 spider.changeAnimation("quieto", spiderquieto)
 
 
@@ -1312,7 +1312,9 @@ dronesvoladoresGroup.destroyEach();
 misilopoGroup.destroyEach();
 puas2Group.destroyEach();
 pareddivisora1.changeAnimation("pared", pareddivisora1Img1)
-
+disparolaserGroup.destroyEach();
+laserultimoGroup.destroyEach();
+laserultimo2Group.destroyEach();
 
 
 
